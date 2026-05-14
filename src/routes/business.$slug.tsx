@@ -4,7 +4,7 @@ import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
 import { itemVariants } from "@/components/Reveal";
 import { motion } from "framer-motion";
-import { BUSINESSES, getBusiness } from "@/data/businesses";
+import { BUSINESSES, getBusiness, type Business } from "@/data/businesses";
 
 const ICONS = { fuel: Fuel, shopping: ShoppingBag, wheat: Wheat, utensils: UtensilsCrossed };
 
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/business/$slug")({
 });
 
 function BusinessDetailPage() {
-  const { business } = Route.useLoaderData();
+  const { business } = Route.useLoaderData() as { business: Business };
   const Icon = ICONS[business.icon as keyof typeof ICONS];
 
   return (
