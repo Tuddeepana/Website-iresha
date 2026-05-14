@@ -1,0 +1,116 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Container, SectionHeading } from "@/components/Section";
+import { Reveal, Stagger } from "@/components/Reveal";
+import { TeamCard } from "@/components/TeamCard";
+import { StatsCounter } from "@/sections/StatsCounter";
+import { TEAM } from "@/data/team";
+import { Quote, Compass, Target } from "lucide-react";
+import chairmanImg from "@/assets/chairman.jpg";
+
+export const Route = createFileRoute("/about")({
+  component: AboutPage,
+  head: () => ({
+    meta: [
+      { title: "About Iresha Holdings — Heritage, Vision & Leadership" },
+      { name: "description", content: "Discover the story, vision and people behind Iresha Holdings — a diversified Sri Lankan group across fuel, retail, agri and hospitality." },
+      { property: "og:title", content: "About Iresha Holdings" },
+      { property: "og:description", content: "Heritage, vision and leadership of one of Sri Lanka's most respected diversified groups." },
+      { property: "og:url", content: "/about" },
+    ],
+    links: [{ rel: "canonical", href: "/about" }],
+  }),
+});
+
+function AboutPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-navy-gradient pt-40 pb-24 text-white">
+        <div className="absolute inset-0 [background-image:radial-gradient(circle_at_85%_20%,rgba(212,175,55,0.18),transparent_55%)]" />
+        <Container>
+          <Reveal>
+            <div className="flex items-center gap-3"><span className="gold-divider" /><span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">About Us</span></div>
+            <h1 className="mt-4 max-w-3xl font-display text-4xl text-white md:text-6xl">A Sri Lankan group built on <span className="text-gold-gradient">trust and craftsmanship</span></h1>
+            <p className="mt-6 max-w-2xl text-white/75">For more than two decades, Iresha Holdings has grown from a single rice mill in Polonnaruwa into a national group serving Sri Lankan households and businesses every day.</p>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* History */}
+      <section className="bg-background py-24">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <Reveal>
+              <SectionHeading eyebrow="Our History" title="From a single mill to a diversified group" description="Founded in 1998, Iresha Holdings began with a small rice mill serving local farmers in the North Central Province. Driven by an unwavering commitment to quality and an entrepreneurial spirit, the group expanded into modern retail, fuel distribution and hospitality — sectors that touch the daily lives of Sri Lankans." />
+              <p className="mt-4 max-w-xl text-muted-foreground">Today we operate over 80 outlets nationwide, employ more than 2,400 people, and partner with thousands of farmers, suppliers and franchise owners across the country.</p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="relative">
+                <div className="absolute -inset-6 -z-10 rounded-3xl bg-gold-gradient opacity-15 blur-2xl" />
+                <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-navy shadow-elevated">
+                  <img src={chairmanImg} alt="Group Chairman" loading="lazy" className="h-full w-full object-cover" />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="bg-mist py-24">
+        <Container>
+          <Reveal><SectionHeading align="center" eyebrow="Vision & Mission" title="Anchored by purpose" /></Reveal>
+          <Stagger className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              { Icon: Compass, title: "Our Vision", text: "To be Sri Lanka's most trusted diversified group — a benchmark for quality, integrity and inclusive growth across every sector we operate in." },
+              { Icon: Target, title: "Our Mission", text: "To deliver products and services that improve the everyday lives of Sri Lankans, while creating opportunities for our people, partners and communities." },
+            ].map(({ Icon, title, text }) => (
+              <Reveal key={title} className="rounded-2xl border border-border bg-card p-10 shadow-soft">
+                <div className="grid h-14 w-14 place-items-center rounded-xl bg-navy-gradient text-gold"><Icon size={22} /></div>
+                <h3 className="mt-6 font-display text-2xl text-navy">{title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{text}</p>
+              </Reveal>
+            ))}
+          </Stagger>
+        </Container>
+      </section>
+
+      {/* Chairman Message */}
+      <section className="bg-background py-24">
+        <Container>
+          <Reveal>
+            <div className="overflow-hidden rounded-3xl bg-navy-gradient text-white shadow-elevated">
+              <div className="grid lg:grid-cols-5">
+                <div className="relative lg:col-span-2">
+                  <img src={chairmanImg} alt="Chairman" loading="lazy" className="h-full w-full object-cover" />
+                </div>
+                <div className="relative p-10 lg:col-span-3 lg:p-14">
+                  <Quote size={48} className="text-gold/60" />
+                  <p className="mt-6 font-display text-2xl leading-relaxed text-white md:text-3xl">
+                    "Our story has never been about scale alone. It has always been about doing the simple things — quality, service, integrity — exceptionally well, every single day."
+                  </p>
+                  <div className="mt-10">
+                    <div className="font-display text-2xl text-gold-gradient italic">Nimal Perera</div>
+                    <div className="mt-1 text-sm text-white/60">Founder & Group Chairman, Iresha Holdings</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <StatsCounter />
+
+      {/* Leadership */}
+      <section className="bg-mist py-24">
+        <Container>
+          <Reveal><SectionHeading align="center" eyebrow="Leadership" title="The team behind the group" description="An experienced leadership team combining decades of Sri Lankan industry expertise with international best practice." /></Reveal>
+          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {TEAM.map((m) => <TeamCard key={m.name} member={m} />)}
+          </Stagger>
+        </Container>
+      </section>
+    </>
+  );
+}
