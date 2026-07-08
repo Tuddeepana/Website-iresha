@@ -3,16 +3,16 @@ import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
 import { StatsCounter } from "@/sections/StatsCounter";
 import { Quote, Compass, Target } from "lucide-react";
-import chairmanImg from "@/assets/chairman.jpg";
-import aboutBg from "@/assets/About_Us_IreshaHoldings.jpg";
-import gallery1 from "@/assets/gallery1.jpg";
-import gallery2 from "@/assets/gallery2.jpg";
-import gallery3 from "@/assets/gallery3.jpg";
-import gallery4 from "@/assets/gallery4.jpg";
-import gallery5 from "@/assets/gallery5.jpg";
-import gallery6 from "@/assets/gallery6.jpg";
-import gallery7 from "@/assets/gallery7.jpg";
-import gallery8 from "@/assets/gallery8.jpg";
+import chairmanImg from "@/assets/chairman.webp";
+import aboutBg from "@/assets/About_Us_IreshaHoldings.webp";
+import gallery1 from "@/assets/gallery1.webp";
+import gallery2 from "@/assets/gallery2.webp";
+import gallery3 from "@/assets/gallery3.webp";
+import gallery4 from "@/assets/gallery4.webp";
+import gallery5 from "@/assets/gallery5.webp";
+import gallery6 from "@/assets/gallery6.webp";
+import gallery7 from "@/assets/gallery7.webp";
+import gallery8 from "@/assets/gallery8.webp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
