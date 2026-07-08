@@ -6,6 +6,7 @@ import { StatsCounter } from "@/sections/StatsCounter";
 import { TEAM } from "@/data/team";
 import { Quote, Compass, Target } from "lucide-react";
 import chairmanImg from "@/assets/chairman.jpg";
+import aboutBg from "@/assets/About_Us_IreshaHoldings.jpg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -25,15 +26,45 @@ function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-gradient pt-40 pb-24 text-white">
-        <div className="absolute inset-0 [background-image:radial-gradient(circle_at_85%_20%,rgba(212,175,55,0.18),transparent_55%)]" />
-        <Container>
-          <Reveal>
-            <div className="flex items-center gap-3"><span className="gold-divider" /><span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">About Us</span></div>
-            <h1 className="mt-4 max-w-3xl font-display text-4xl text-white md:text-6xl">A Sri Lankan group built on <span className="text-gold-gradient">trust and craftsmanship</span></h1>
-            <p className="mt-6 max-w-2xl text-white/75">For more than two decades, Iresha Holdings has grown from a single rice mill in Polonnaruwa into a national group serving Sri Lankan households and businesses every day.</p>
-          </Reveal>
-        </Container>
+      <section className="relative w-full overflow-hidden pt-40 pb-24 text-white">
+
+      {/* Background Image */}
+      <img
+      src={aboutBg}
+      alt="About background"
+      className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+
+  
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40" />
+
+  
+      <div className="absolute inset-0 [background-image:radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.15),transparent_60%)]" />
+
+      {/* Content */}
+      <Container>
+        <Reveal>
+          <div className="flex items-center gap-3">
+            <span className="gold-divider" />
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold drop-shadow-md">
+              About Us
+            </span>
+          </div>
+
+          <h1 className="mt-4 max-w-3xl font-display text-4xl text-white/95 md:text-6xl leading-tight drop-shadow-xl">
+            A Sri Lankan group built on{" "}
+          <span className="text-gold-gradient">
+            trust and craftsmanship
+          </span>
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-white/90 text-lg drop-shadow-lg">
+            For more than two decades, Iresha Holdings has grown from a single rice
+            mill in Polonnaruwa into a national group serving Sri Lankan households
+            and businesses every day.
+          </p>
+        </Reveal>
+      </Container>
       </section>
 
       {/* History */}
