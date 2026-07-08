@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
-import { TeamCard } from "@/components/TeamCard";
 import { StatsCounter } from "@/sections/StatsCounter";
-import { TEAM } from "@/data/team";
+import gallery1 from "@/assets/biz-fuel.jpg";
+import gallery2 from "@/assets/biz-restaurant.jpg";
+import gallery3 from "@/assets/biz-ricemill.jpg";
+import gallery4 from "@/assets/biz-supermarket.jpg";
 import { Quote, Compass, Target } from "lucide-react";
 import chairmanImg from "@/assets/chairman.jpg";
 
@@ -107,7 +109,11 @@ function AboutPage() {
         <Container>
           <Reveal><SectionHeading align="center" eyebrow="Gallery" title="Behind the Scenes" description="A glimpse into the world of Iresha Holdings." /></Reveal>
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {TEAM.map((m) => <TeamCard key={m.name} member={m} />)}
+            {[gallery1, gallery2, gallery3, gallery4].map((src, i) => (
+              <div key={i} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated">
+                <img src={src} alt={`Gallery image ${i + 1}`} loading="lazy" className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+            ))}
           </Stagger>
         </Container>
       </section>
