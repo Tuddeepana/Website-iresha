@@ -1,7 +1,7 @@
-import fuel from "@/assets/biz-fuel.jpg";
-import supermarket from "@/assets/biz-supermarket.jpg";
-import ricemill from "@/assets/biz-ricemill.jpg";
-import restaurant from "@/assets/biz-restaurant.jpg";
+import fuel from "@/assets/biz-fuel.webp";
+import supermarket from "@/assets/biz-supermarket.webp";
+import ricemill from "@/assets/biz-ricemill.webp";
+import restaurant from "@/assets/biz-restaurant.webp";
 
 export type Business = {
   slug: string;
