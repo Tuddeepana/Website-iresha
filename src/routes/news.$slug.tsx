@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Container } from "@/components/Section";
 import { NEWS } from "@/data/news";
 import { Calendar } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/news/$slug")({
   component: NewsArticlePage,
@@ -17,35 +18,34 @@ function NewsArticlePage() {
 
   return (
     <>
-      <section className="bg-mist py-24 pb-12">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-block rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-navy">
-              {article.category}
-            </div>
-            <h1 className="font-display text-4xl font-bold text-navy md:text-5xl lg:text-6xl">
-              {article.title}
-            </h1>
-            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <Calendar size={16} />
-              {article.date}
-            </div>
-          </div>
-        </Container>
+      {/* Hero */}
+      <section className="relative h-[60vh] min-h-[480px] overflow-hidden">
+        {article.image ? (
+          <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover" />
+        ) : (
+          <div className="absolute inset-0 bg-navy-gradient" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/40" />
+        <div className="absolute inset-0 flex items-end">
+          <Container>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+              <div className="flex items-center gap-3 text-gold">
+                <span className="text-xs font-semibold uppercase tracking-[0.25em]">{article.category}</span>
+              </div>
+              <h1 className="mt-4 max-w-4xl font-display text-4xl text-white md:text-6xl">{article.title}</h1>
+              <div className="mt-6 flex items-center gap-2 pb-12 text-sm text-white/80">
+                <Calendar size={16} />
+                {article.date}
+              </div>
+            </motion.div>
+          </Container>
+        </div>
       </section>
 
-      <section className="bg-background py-12">
+      {/* Content */}
+      <section className="bg-background py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            {article.image && (
-              <div className="overflow-hidden rounded-3xl shadow-elevated mb-12">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            )}
             <div className="prose prose-lg mx-auto text-muted-foreground">
               <p className="lead text-xl text-foreground font-medium mb-8">
                 {article.excerpt}
