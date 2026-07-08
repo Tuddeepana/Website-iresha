@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/HeroSection_IreshaHoldings.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section className="relative flex max-h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
       {/* Parallax bg */}
       <motion.div
         initial={{ scale: 1.1 }}
