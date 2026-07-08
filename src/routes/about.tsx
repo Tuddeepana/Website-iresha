@@ -82,7 +82,7 @@ function AboutPage() {
             <div className="overflow-hidden rounded-3xl bg-navy-gradient text-white shadow-elevated">
               <div className="grid lg:grid-cols-5">
                 <div className="relative lg:col-span-2">
-                  <img src={chairmanImg} alt="Chairman" loading="lazy" className="h-full w-full object-cover" />
+                  <img src={chairmanImg} alt="Chairman" loading="lazy" className="h-full w-full object-cover -scale-x-100" />
                 </div>
                 <div className="relative p-10 lg:col-span-3 lg:p-14">
                   <Quote size={48} className="text-gold/60" />
