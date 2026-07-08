@@ -8,12 +8,14 @@ export function NewsCard({
   date,
   category,
   href,
+  image,
 }: {
   title: string;
   excerpt: string;
   date: string;
   category: string;
   href: string;
+  image?: string;
 }) {
   return (
     <motion.a
@@ -22,7 +24,11 @@ export function NewsCard({
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated"
     >
       <div className="relative h-44 overflow-hidden bg-navy-gradient">
-        <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_50%)]" />
+        {image ? (
+          <img src={image} alt={title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        ) : (
+          <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_50%)]" />
+        )}
         <div className="absolute left-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold backdrop-blur">
           {category}
         </div>
