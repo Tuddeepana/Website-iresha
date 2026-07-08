@@ -34,9 +34,9 @@ export const BUSINESSES: Business[] = [
       { title: "Vehicle Care", description: "Express car wash, tyre and lubrication services." },
     ],
     achievements: [
-      { value: "42+", label: "Stations Nationwide" },
+      { value: "1", label: "Stations Nationwide" },
       { value: "4.9★", label: "Customer Rating" },
-      { value: "24/7", label: "Operations" },
+      { value: "7AM - 10PM", label: "Operations" },
     ],
     gallery: [fuel, fuel, fuel],
   },
