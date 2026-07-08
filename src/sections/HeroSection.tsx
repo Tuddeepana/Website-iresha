@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/HeroSection_IreshaHoldings.jpg";
+import heroBg from "@/assets/HeroSection_IreshaHoldings.webp";
 
 export function HeroSection() {
   return (
