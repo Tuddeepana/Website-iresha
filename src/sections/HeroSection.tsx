@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/HeroSection_IreshaHoldings.webp";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section className="relative flex max-h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
       {/* Parallax bg */}
       <motion.div
         initial={{ scale: 1.1 }}
@@ -81,26 +81,6 @@ export function HeroSection() {
           >
             Contact Us
           </Link>
-        </motion.div>
-
-        {/* Stat strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.05 }}
-          className="mt-20 grid max-w-3xl grid-cols-2 gap-y-8 gap-x-10 sm:grid-cols-4"
-        >
-          {[
-            { v: "26+", l: "Years of Heritage" },
-            { v: "4", l: "Sectors" },
-            { v: "80+", l: "Outlets" },
-            { v: "2.4K", l: "Team Members" },
-          ].map((s) => (
-            <div key={s.l}>
-              <div className="font-display text-3xl text-gold">{s.v}</div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-white/55">{s.l}</div>
-            </div>
-          ))}
         </motion.div>
       </div>
 

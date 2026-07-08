@@ -1,23 +1,17 @@
+import newsImage from "@/assets/news_fuel_station_ opens_tissamaharam.webp";
+
 export const NEWS = [
   {
-    title: "Iresha Holdings opens 42nd fuel station in Kurunegala",
+    title: "Iresha Holdings opens fuel station in Tissamaharama",
     excerpt: "Our latest flagship station extends nationwide coverage and introduces an EV-ready forecourt.",
     date: "May 2, 2026",
     category: "Fuel",
-    href: "/news",
-  },
-  {
-    title: "Iresha Mart partners with 200 local farmers in new sourcing programme",
-    excerpt: "A direct procurement initiative to bring fresher produce to shelves and fairer prices to growers.",
-    date: "April 18, 2026",
-    category: "Retail",
-    href: "/news",
-  },
-  {
-    title: "Premium rice export volumes grow 38% year on year",
-    excerpt: "Iresha Rice Mills records its strongest export quarter, with new shipments to the GCC and Maldives.",
-    date: "March 30, 2026",
-    category: "Agri",
-    href: "/news",
+    href: "/news/fuel-station-tissamaharama",
+    image: newsImage,
+    slug: "fuel-station-tissamaharama",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ]
   },
 ];

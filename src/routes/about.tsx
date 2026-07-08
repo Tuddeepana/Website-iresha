@@ -1,11 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
-import { TeamCard } from "@/components/TeamCard";
 import { StatsCounter } from "@/sections/StatsCounter";
-import { TEAM } from "@/data/team";
 import { Quote, Compass, Target } from "lucide-react";
-import chairmanImg from "@/assets/chairman.jpg";
+import chairmanImg from "@/assets/chairman.webp";
+import aboutBg from "@/assets/About_Us_IreshaHoldings.webp";
+import gallery1 from "@/assets/gallery1.webp";
+import gallery2 from "@/assets/gallery2.webp";
+import gallery3 from "@/assets/gallery3.webp";
+import gallery4 from "@/assets/gallery4.webp";
+import gallery5 from "@/assets/gallery5.webp";
+import gallery6 from "@/assets/gallery6.webp";
+import gallery7 from "@/assets/gallery7.webp";
+import gallery8 from "@/assets/gallery8.webp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -25,15 +32,45 @@ function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-gradient pt-40 pb-24 text-white">
-        <div className="absolute inset-0 [background-image:radial-gradient(circle_at_85%_20%,rgba(212,175,55,0.18),transparent_55%)]" />
-        <Container>
-          <Reveal>
-            <div className="flex items-center gap-3"><span className="gold-divider" /><span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">About Us</span></div>
-            <h1 className="mt-4 max-w-3xl font-display text-4xl text-white md:text-6xl">A Sri Lankan group built on <span className="text-gold-gradient">trust and craftsmanship</span></h1>
-            <p className="mt-6 max-w-2xl text-white/75">For more than two decades, Iresha Holdings has grown from a single rice mill in Polonnaruwa into a national group serving Sri Lankan households and businesses every day.</p>
-          </Reveal>
-        </Container>
+      <section className="relative w-full overflow-hidden pt-40 pb-24 text-white">
+
+      {/* Background Image */}
+      <img
+      src={aboutBg}
+      alt="About background"
+      className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+
+  
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40" />
+
+  
+      <div className="absolute inset-0 [background-image:radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.15),transparent_60%)]" />
+
+      {/* Content */}
+      <Container>
+        <Reveal>
+          <div className="flex items-center gap-3">
+            <span className="gold-divider" />
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold drop-shadow-md">
+              About Us
+            </span>
+          </div>
+
+          <h1 className="mt-4 max-w-3xl font-display text-4xl text-white/95 md:text-6xl leading-tight drop-shadow-xl">
+            A Sri Lankan group built on{" "}
+          <span className="text-gold-gradient">
+            trust and craftsmanship
+          </span>
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-white/90 text-lg drop-shadow-lg">
+            For more than two decades, Iresha Holdings has grown from a single rice
+            mill in Polonnaruwa into a national group serving Sri Lankan households
+            and businesses every day.
+          </p>
+        </Reveal>
+      </Container>
       </section>
 
       {/* History */}
@@ -82,7 +119,7 @@ function AboutPage() {
             <div className="overflow-hidden rounded-3xl bg-navy-gradient text-white shadow-elevated">
               <div className="grid lg:grid-cols-5">
                 <div className="relative lg:col-span-2">
-                  <img src={chairmanImg} alt="Chairman" loading="lazy" className="h-full w-full object-cover" />
+                  <img src={chairmanImg} alt="Chairman" loading="lazy" className="h-full w-full object-cover -scale-x-100" />
                 </div>
                 <div className="relative p-10 lg:col-span-3 lg:p-14">
                   <Quote size={48} className="text-gold/60" />
@@ -90,7 +127,7 @@ function AboutPage() {
                     "Our story has never been about scale alone. It has always been about doing the simple things — quality, service, integrity — exceptionally well, every single day."
                   </p>
                   <div className="mt-10">
-                    <div className="font-display text-2xl text-gold-gradient italic">Nimal Perera</div>
+                    <div className="font-display text-2xl text-gold-gradient italic">G.A. Sunil Shantha</div>
                     <div className="mt-1 text-sm text-white/60">Founder & Group Chairman, Iresha Holdings</div>
                   </div>
                 </div>
@@ -102,12 +139,26 @@ function AboutPage() {
 
       <StatsCounter />
 
-      {/* Leadership */}
+      {/* Gallery */}
       <section className="bg-mist py-24">
         <Container>
-          <Reveal><SectionHeading align="center" eyebrow="Leadership" title="The team behind the group" description="An experienced leadership team combining decades of Sri Lankan industry expertise with international best practice." /></Reveal>
-          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {TEAM.map((m) => <TeamCard key={m.name} member={m} />)}
+          <Reveal><SectionHeading align="center" eyebrow="Gallery" title="Behind the Scenes" description="A glimpse into the world of Iresha Holdings." /></Reveal>
+          <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
+            {[
+              { src: gallery1, className: "col-span-2 row-span-2" },
+              { src: gallery2, className: "col-span-1 row-span-1" },
+              { src: gallery3, className: "col-span-1 row-span-1" },
+              { src: gallery4, className: "col-span-1 row-span-1" },
+              { src: gallery5, className: "col-span-1 row-span-1" },
+              { src: gallery6, className: "col-span-1 row-span-1" },
+              { src: gallery7, className: "col-span-1 row-span-1" },
+              { src: gallery8, className: "col-span-2 row-span-1" },
+            ].map(({ src, className }, i) => (
+              <div key={i} className={`group relative overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated ${className}`}>
+                <img src={src} alt={`Gallery image ${i + 1}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
+              </div>
+            ))}
           </Stagger>
         </Container>
       </section>

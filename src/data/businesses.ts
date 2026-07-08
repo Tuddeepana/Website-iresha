@@ -1,7 +1,7 @@
-import fuel from "@/assets/biz-fuel.jpg";
-import supermarket from "@/assets/biz-supermarket.jpg";
-import ricemill from "@/assets/biz-ricemill.jpg";
-import restaurant from "@/assets/biz-restaurant.jpg";
+import fuel from "@/assets/biz-fuel.webp";
+import supermarket from "@/assets/biz-supermarket.webp";
+import ricemill from "@/assets/biz-ricemill.webp";
+import restaurant from "@/assets/biz-restaurant.webp";
 
 export type Business = {
   slug: string;
@@ -34,9 +34,9 @@ export const BUSINESSES: Business[] = [
       { title: "Vehicle Care", description: "Express car wash, tyre and lubrication services." },
     ],
     achievements: [
-      { value: "42+", label: "Stations Nationwide" },
+      { value: "1", label: "Stations Nationwide" },
       { value: "4.9★", label: "Customer Rating" },
-      { value: "24/7", label: "Operations" },
+      { value: "7AM - 10PM", label: "Operations" },
     ],
     gallery: [fuel, fuel, fuel],
   },

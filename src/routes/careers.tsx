@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
-import { JobCard } from "@/components/JobCard";
-import { JOBS } from "@/data/jobs";
 import { TrendingUp, Lightbulb, Globe2, HeartHandshake, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/careers")({
@@ -56,18 +54,8 @@ function CareersPage() {
         </Container>
       </section>
 
-      {/* Vacancies */}
-      <section className="bg-mist py-24">
-        <Container>
-          <Reveal><SectionHeading eyebrow="Open Roles" title="Current vacancies" description="A selection of opportunities open across the group. Don't see the right fit? Send us your CV — we are always looking for exceptional people." /></Reveal>
-          <Stagger className="mt-12 grid gap-4">
-            {JOBS.map((j) => <JobCard key={j.title} {...j} />)}
-          </Stagger>
-        </Container>
-      </section>
-
       {/* CTA */}
-      <section className="bg-background py-20">
+      <section className="bg-mist py-20">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 rounded-3xl bg-navy-gradient p-10 text-white shadow-elevated md:flex-row md:items-center md:p-14">
             <div>
