@@ -90,7 +90,7 @@ function AboutPage() {
                     "Our story has never been about scale alone. It has always been about doing the simple things — quality, service, integrity — exceptionally well, every single day."
                   </p>
                   <div className="mt-10">
-                    <div className="font-display text-2xl text-gold-gradient italic">Nimal Perera</div>
+                    <div className="font-display text-2xl text-gold-gradient italic">G.A. Sunil Shantha</div>
                     <div className="mt-1 text-sm text-white/60">Founder & Group Chairman, Iresha Holdings</div>
                   </div>
                 </div>
@@ -102,10 +102,10 @@ function AboutPage() {
 
       <StatsCounter />
 
-      {/* Leadership */}
+      {/* Gallery */}
       <section className="bg-mist py-24">
         <Container>
-          <Reveal><SectionHeading align="center" eyebrow="Leadership" title="The team behind the group" description="An experienced leadership team combining decades of Sri Lankan industry expertise with international best practice." /></Reveal>
+          <Reveal><SectionHeading align="center" eyebrow="Gallery" title="Behind the Scenes" description="A glimpse into the world of Iresha Holdings." /></Reveal>
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((m) => <TeamCard key={m.name} member={m} />)}
           </Stagger>
