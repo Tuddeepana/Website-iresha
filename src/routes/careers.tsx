@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
-import { JobCard } from "@/components/JobCard";
-import { JOBS } from "@/data/jobs";
 import { TrendingUp, Lightbulb, Globe2, HeartHandshake, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/careers")({
