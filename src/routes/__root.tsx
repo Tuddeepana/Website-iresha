@@ -72,8 +72,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
       { property: "og:description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
       { name: "twitter:description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
     scripts: [{
