@@ -79,7 +79,17 @@ function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <Reveal>
               <SectionHeading eyebrow="Our History" title="From a single mill to a diversified group" description="In 1992, Iresha holdings established Iresha Rice Mills as its inaugural venture, laying the foundation for a legacy of innovation, quality and customer satisfaction." />
-              <p className="mt-4 max-w-xl text-muted-foreground">Today we operate over 80 outlets nationwide, employ more than 2,400 people, and partner with thousands of farmers, suppliers and franchise owners across the country.</p>
+              <div className="mt-6 max-w-xl text-muted-foreground">
+                <p className="mb-3 text-navy font-medium">Our Outlets:</p>
+                <ul className="space-y-2 list-disc pl-5">
+                  <li>Iresha Rice Mill, Pannagamuwa</li>
+                  <li>Iresha filling station, Tissamaharama</li>
+                  <li>Iresha super city, Pannagamuwa</li>
+                  <li>Iresha super city, Debarawewa</li>
+                  <li>Hotel tissa</li>
+                </ul>
+                <p className="mt-5">We proudly partner with thousands of farmers, suppliers, and franchise owners across the country.</p>
+              </div>
             </Reveal>
             <Reveal delay={0.1}>
               <div className="relative">
