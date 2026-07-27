@@ -151,15 +151,25 @@ export function Footer() {
               </li>
 
               {/* Email */}
-              <li className="flex items-center gap-2.5">
-                <Mail size={16} className="text-gold" />
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="hover:text-gold"
-                >
-                  {SITE.email}
-                </a>
-              </li>
+              <li className="flex items-start gap-2.5">
+  <Mail size={16} className="mt-0.5 text-gold" />
+
+  <div className="flex flex-col">
+    {SITE.email.map((e, i) => {
+      const emailOnly = e.split("–")[1]?.trim();
+
+      return (
+        <a
+          key={i}
+          href={`mailto:${emailOnly}`}
+          className="hover:text-gold"
+        >
+          {e}
+        </a>
+      );
+    })}
+  </div>
+</li>
 
             </ul>
           </div>

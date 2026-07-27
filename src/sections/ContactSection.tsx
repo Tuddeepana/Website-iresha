@@ -32,7 +32,21 @@ export function ContactSection() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="grid h-9 w-9 place-items-center rounded-lg bg-white/10"><Mail size={16} className="text-gold" /></div>
-                  <div><div className="font-semibold text-white">Email</div><a className="text-white/70 hover:text-gold" href={`mailto:${SITE.email}`}>{SITE.email}</a></div>
+                  <div><div className="font-semibold text-white">Email</div>    <div className="flex flex-col text-white/70">
+      {SITE.email.map((e, i) => {
+        const emailOnly = e.split("–")[1]?.trim(); // extract actual email
+        return (
+          <a
+            key={i}
+            href={`mailto:${emailOnly}`}
+            className="hover:text-gold"
+          >
+            {e}
+          </a>
+        );
+      })}
+    </div>
+</div>
                 </div>
               </div>
             </div>
