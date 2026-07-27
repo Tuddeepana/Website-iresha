@@ -57,9 +57,9 @@ export const BUSINESSES: Business[] = [
       { title: "Loyalty Rewards", description: "A rewarding membership program for regular shoppers." },
     ],
     achievements: [
-      { value: "18", label: "Outlets" },
+      { value: "2", label: "Outlets" },
       { value: "12K+", label: "SKUs Stocked" },
-      { value: "1M+", label: "Members" },
+      { value: "10K+", label: "Customers" },
     ],
     gallery: [supermarket, supermarket, supermarket],
   },
