@@ -104,16 +104,29 @@ function BusinessDetailPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-background py-24">
+      <section className="bg-mist py-24">
         <Container>
-          <Reveal><SectionHeading eyebrow="Gallery" title="A glimpse inside" /></Reveal>
-          <Stagger className="mt-12 grid gap-4 md:grid-cols-3">
-            {business.gallery.map((src, i) => (
-              <motion.div variants={itemVariants} key={i} className="group overflow-hidden rounded-2xl shadow-soft">
-                <img src={src} alt={`${business.title} ${i + 1}`} loading="lazy"
-                  className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              </motion.div>
-            ))}
+          <Reveal><SectionHeading align="center" eyebrow="Gallery" title="A glimpse inside" /></Reveal>
+          <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
+            {business.gallery.map((src, i) => {
+              const classes = [
+                "col-span-2 row-span-2",
+                "col-span-1 row-span-1",
+                "col-span-1 row-span-1",
+                "col-span-1 row-span-1",
+                "col-span-1 row-span-1",
+                "col-span-1 row-span-1",
+                "col-span-1 row-span-1",
+                "col-span-2 row-span-1",
+              ];
+              const className = classes[i % classes.length];
+              return (
+                <motion.div variants={itemVariants} key={i} className={`group relative overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated ${className}`}>
+                  <img src={src} alt={`${business.title} ${i + 1}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
+                </motion.div>
+              );
+            })}
           </Stagger>
         </Container>
       </section>
