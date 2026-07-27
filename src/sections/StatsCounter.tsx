@@ -3,9 +3,9 @@ import { Counter } from "@/components/Counter";
 
 const STATS = [
   { value: 4, suffix: "", label: "Group Companies" },
-  { value: 80, suffix: "+", label: "Outlets Nationwide" },
-  { value: 2400, suffix: "+", label: "Team Members" },
-  { value: 26, suffix: "", label: "Years of Heritage" },
+  { value: 5, suffix: "+", label: "Outlets Nationwide" },
+  { value: 50, suffix: "+", label: "Team Members" },
+  { value: 24, suffix: "", label: "Years of Heritage" },
 ];
 
 export function StatsCounter() {
