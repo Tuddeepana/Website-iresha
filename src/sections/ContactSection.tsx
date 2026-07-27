@@ -56,9 +56,11 @@ export function ContactSection() {
               <iframe
                 title="Iresha Holdings location"
                 aria-label="Map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=79.83%2C6.89%2C79.88%2C6.93&layer=mapnik"
-                className="h-full w-full"
+                src="https://maps.google.com/maps?q=Iresha+Filling+Station+(pvt)+Ltd&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="h-full w-full border-0"
                 loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </Reveal>
