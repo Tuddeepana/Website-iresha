@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { NAV, SITE } from "@/data/site";
 import { BUSINESSES } from "@/data/businesses";
+import logoLight from "@/assets/Iresha Holdings LOGO Reverse.webp";
 
 export function Footer() {
   return (
@@ -9,11 +10,8 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl container-px py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-2.5">
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-gold-gradient font-bold text-navy">IH</span>
-              <span className="font-display text-xl font-semibold text-white">
-                Iresha <span className="text-gold">Holdings</span>
-              </span>
+            <Link to="/" className="flex items-center">
+              <img src={logoLight} alt="Iresha Holdings Logo" className="h-20 w-auto object-contain" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">{SITE.description}</p>
             <div className="mt-6 flex gap-3">

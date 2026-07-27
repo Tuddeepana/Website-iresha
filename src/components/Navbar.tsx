@@ -3,6 +3,8 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { NAV, SITE } from "@/data/site";
 import { useScrolled } from "@/hooks/useScrolled";
+import logoDark from "@/assets/Iresha Holdings LOGO.webp";
+import logoLight from "@/assets/Iresha Holdings LOGO Reverse.webp";
 
 export function Navbar() {
   const scrolled = useScrolled(20);
@@ -18,13 +20,12 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between container-px">
-        <Link to="/" className="flex items-center gap-2.5" aria-label={SITE.name}>
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-navy-gradient text-sm font-bold text-gold shadow-soft">
-            IH
-          </span>
-          <span className={`font-display text-lg font-semibold tracking-tight ${scrolled || open ? "text-navy" : "text-white"}`}>
-            Iresha <span className="text-gold">Holdings</span>
-          </span>
+        <Link to="/" className="flex items-center" aria-label={SITE.name}>
+          <img 
+            src={scrolled || open ? logoDark : logoLight} 
+            alt="Iresha Holdings Logo" 
+            className="h-16 w-auto object-contain transition-all duration-300" 
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
