@@ -2,6 +2,13 @@ import fuel from "@/assets/biz-fuel.webp";
 import supermarket from "@/assets/biz-supermarket.webp";
 import ricemill from "@/assets/biz-ricemill.webp";
 import restaurant from "@/assets/biz-restaurant.webp";
+import supercityMain from "@/assets/Iresha super city.webp";
+import supercity1 from "@/assets/Iresha super city1.webp";
+import supercity2 from "@/assets/Iresha super city2.webp";
+import supercity3 from "@/assets/Iresha super city3.webp";
+import supercity4 from "@/assets/Iresha super city4.webp";
+import supercity5 from "@/assets/Iresha super city5.webp";
+import supercity6 from "@/assets/Iresha super city6.webp";
 
 export type Business = {
   slug: string;
@@ -42,13 +49,13 @@ export const BUSINESSES: Business[] = [
   },
   {
     slug: "supermarket",
-    title: "Iresha Mart",
+    title: "Iresha Super City",
     tagline: "Quality groceries for every Sri Lankan family.",
     description:
       "A modern supermarket chain offering fresh produce, household essentials and international brands.",
     longDescription:
-      "Iresha Mart brings supermarket convenience to communities across the island. From farm-fresh produce to imported brands, our stores combine clean modern design, transparent pricing and a curated product range.",
-    image: supermarket,
+      "Iresha Super City brings supermarket convenience to communities across the island. From farm-fresh produce to imported brands, our stores combine clean modern design, transparent pricing and a curated product range.",
+    image: supercityMain,
     icon: "shopping",
     services: [
       { title: "Fresh Produce", description: "Daily-sourced vegetables, fruit and dairy from local farmers." },
@@ -61,7 +68,7 @@ export const BUSINESSES: Business[] = [
       { value: "12K+", label: "SKUs Stocked" },
       { value: "1M+", label: "Members" },
     ],
-    gallery: [supermarket, supermarket, supermarket],
+    gallery: [supercity1, supercity2, supercity3, supercity4, supercity5, supercity6],
   },
   {
     slug: "rice-mill",
