@@ -78,7 +78,7 @@ function AboutPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <Reveal>
-              <SectionHeading eyebrow="Our History" title="From a single mill to a diversified group" description="Founded in 1998, Iresha Holdings began with a small rice mill serving local farmers in the North Central Province. Driven by an unwavering commitment to quality and an entrepreneurial spirit, the group expanded into modern retail, fuel distribution and hospitality — sectors that touch the daily lives of Sri Lankans." />
+              <SectionHeading eyebrow="Our History" title="From a single mill to a diversified group" description="In 1992, Iresha holdings established Iresha Rice Mills as its inaugural venture, laying the foundation for a legacy of innovation, quality and customer satisfaction." />
               <p className="mt-4 max-w-xl text-muted-foreground">Today we operate over 80 outlets nationwide, employ more than 2,400 people, and partner with thousands of farmers, suppliers and franchise owners across the country.</p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -99,8 +99,8 @@ function AboutPage() {
           <Reveal><SectionHeading align="center" eyebrow="Vision & Mission" title="Anchored by purpose" /></Reveal>
           <Stagger className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              { Icon: Compass, title: "Our Vision", text: "To be Sri Lanka's most trusted diversified group — a benchmark for quality, integrity and inclusive growth across every sector we operate in." },
-              { Icon: Target, title: "Our Mission", text: "To deliver products and services that improve the everyday lives of Sri Lankans, while creating opportunities for our people, partners and communities." },
+              { Icon: Compass, title: "Our Vision", text: "To be the region’s most trusted and diversified business group, enriching lives by delivering quality products, reliable services, and sustainable growth across agriculture, retail, energy, hospitality, machinery, and transportation." },
+              { Icon: Target, title: "Our Mission", text: "We are committed to delivering high-quality products and reliable services across agriculture, retail, energy, hospitality, machinery and transportation. Through integrity, innovation, operational excellence, and customer focus, we create value customers, provide rewarding opportunities for our employees, support our business partners, and contribute to the sustainable development of the communities we serve." },
             ].map(({ Icon, title, text }) => (
               <Reveal key={title} className="rounded-2xl border border-border bg-card p-10 shadow-soft">
                 <div className="grid h-14 w-14 place-items-center rounded-xl bg-navy-gradient text-gold"><Icon size={22} /></div>
@@ -124,7 +124,8 @@ function AboutPage() {
                 <div className="relative p-10 lg:col-span-3 lg:p-14">
                   <Quote size={48} className="text-gold/60" />
                   <p className="mt-6 font-display text-2xl leading-relaxed text-white md:text-3xl">
-                    "Our story has never been about scale alone. It has always been about doing the simple things — quality, service, integrity — exceptionally well, every single day."
+                    "our journey is built on hard work, integrity, and a commitment to serving our community. From our Iresha Rice mill to our Iresha filling station, Iresha super city, Hotel Tissa restaurant & bar, Iresha machinery & transport, we strive to deliver quality, reliability, and value in everything we do.
+                    <br /><br /> We sincerely thank our customers, employees, and business partners for their continued trust and support. Together, we remain committed to sustainable growth and excellence as we build a strong future."
                   </p>
                   <div className="mt-10">
                     <div className="font-display text-2xl text-gold-gradient italic">G.A. Sunil Shantha</div>
