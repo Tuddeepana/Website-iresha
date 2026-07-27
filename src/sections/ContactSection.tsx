@@ -22,7 +22,13 @@ export function ContactSection() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="grid h-9 w-9 place-items-center rounded-lg bg-white/10"><Phone size={16} className="text-gold" /></div>
-                  <div><div className="font-semibold text-white">Phone</div><a className="text-white/70 hover:text-gold" href={`tel:${SITE.phone}`}>{SITE.phone}</a></div>
+                  <div><div className="font-semibold text-white">Phone</div><div className="text-white/70 space-y-1">
+  {SITE.phone.map((p, i) => (
+    <a key={i} href={`tel:${p.replace(/[^0-9]/g, "")}`} className="block hover:text-gold">
+      {p}
+    </a>
+  ))}
+</div></div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="grid h-9 w-9 place-items-center rounded-lg bg-white/10"><Mail size={16} className="text-gold" /></div>
