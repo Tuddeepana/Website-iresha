@@ -4,8 +4,8 @@ export const SITE = {
   description:
     "Iresha Holdings is a diversified Sri Lankan group with operations in fuel retail, supermarkets, rice milling and hospitality.",
   email: "info@ireshaholdings.com",
-  phone: "+94 11 234 5678",
-  address: "No. 88, Galle Road, Colombo 03, Sri Lanka",
+  phone: ["Iresha Rice Mill & Iresha Food city – 047-2237644", "Iresha filling station – 047-2259606"],
+  address: "Iresha Rice Mill, Pannagamuwa, Tissamaharama.",
   socials: {
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
