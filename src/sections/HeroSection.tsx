@@ -20,7 +20,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
+    <section className="relative flex h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
       {/* Background Slider */}
       <div className="absolute inset-0">
         <AnimatePresence mode="popLayout">
