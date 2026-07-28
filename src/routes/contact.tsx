@@ -25,7 +25,7 @@ function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy-gradient pt-40 pb-20 text-white">
-        <div className="absolute inset-0 [background-image:radial-gradient(circle_at_50%_30%,rgba(212,175,55,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(212,175,55,0.18),transparent_55%)]" />
         <Container>
           <Reveal>
             <div className="flex items-center gap-3">
