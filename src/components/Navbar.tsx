@@ -21,10 +21,10 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between container-px">
         <Link to="/" className="flex items-center" aria-label={SITE.name}>
-          <img 
-            src={scrolled || open ? logoDark : logoLight} 
-            alt="Iresha Holdings Logo" 
-            className="h-16 w-auto object-contain transition-all duration-300" 
+          <img
+            src={scrolled || open ? logoDark : logoLight}
+            alt="Iresha Holdings Logo"
+            className="h-16 w-auto object-contain transition-all duration-300"
           />
         </Link>
 

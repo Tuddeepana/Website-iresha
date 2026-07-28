@@ -18,7 +18,6 @@ export function Footer() {
     <footer className="bg-navy-gradient text-white/80">
       <div className="mx-auto w-full max-w-7xl container-px py-16">
         <div className="grid gap-12 lg:grid-cols-12">
-          
           {/* Logo + Description */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center">
@@ -29,9 +28,7 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mt-5 max-w-sm text-sm leading-relaxed">
-              {SITE.description}
-            </p>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed">{SITE.description}</p>
 
             {/* Social Icons */}
             <div className="mt-6 flex gap-3">
@@ -57,16 +54,11 @@ export function Footer() {
 
           {/* Company Links */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-base font-semibold text-white">
-              Company
-            </h4>
+            <h4 className="font-display text-base font-semibold text-white">Company</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {NAV.map((n) => (
                 <li key={n.to}>
-                  <Link
-                    to={n.to}
-                    className="transition-colors hover:text-gold"
-                  >
+                  <Link to={n.to} className="transition-colors hover:text-gold">
                     {n.label}
                   </Link>
                 </li>
@@ -76,9 +68,7 @@ export function Footer() {
 
           {/* Businesses */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-base font-semibold text-white">
-              Our Businesses
-            </h4>
+            <h4 className="font-display text-base font-semibold text-white">Our Businesses</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {BUSINESSES.map((b) => (
                 <li key={b.slug}>
@@ -96,13 +86,9 @@ export function Footer() {
 
           {/* Contact + Subscribe */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-base font-semibold text-white">
-              Stay Updated
-            </h4>
+            <h4 className="font-display text-base font-semibold text-white">Stay Updated</h4>
 
-            <p className="mt-4 text-sm">
-              Subscribe for quarterly insights and group news.
-            </p>
+            <p className="mt-4 text-sm">Subscribe for quarterly insights and group news.</p>
 
             {/* Subscribe Form */}
             <form
@@ -127,7 +113,6 @@ export function Footer() {
 
             {/* Contact Info */}
             <ul className="mt-6 space-y-3 text-sm">
-              
               {/* Address */}
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="mt-0.5 text-gold" />
@@ -139,11 +124,7 @@ export function Footer() {
                 <Phone size={16} className="mt-0.5 text-gold" />
                 <div className="flex flex-col">
                   {SITE.phone.map((p, i) => (
-                    <a
-                      key={i}
-                      href={`tel:${p.replace(/[^0-9]/g, "")}`}
-                      className="hover:text-gold"
-                    >
+                    <a key={i} href={`tel:${p.replace(/[^0-9]/g, "")}`} className="hover:text-gold">
                       {p}
                     </a>
                   ))}
@@ -152,25 +133,20 @@ export function Footer() {
 
               {/* Email */}
               <li className="flex items-start gap-2.5">
-  <Mail size={16} className="mt-0.5 text-gold" />
+                <Mail size={16} className="mt-0.5 text-gold" />
 
-  <div className="flex flex-col">
-    {SITE.email.map((e, i) => {
-      const emailOnly = e.split("–")[1]?.trim();
+                <div className="flex flex-col">
+                  {SITE.email.map((e, i) => {
+                    const emailOnly = e.split("–")[1]?.trim();
 
-      return (
-        <a
-          key={i}
-          href={`mailto:${emailOnly}`}
-          className="hover:text-gold"
-        >
-          {e}
-        </a>
-      );
-    })}
-  </div>
-</li>
-
+                    return (
+                      <a key={i} href={`mailto:${emailOnly}`} className="hover:text-gold">
+                        {e}
+                      </a>
+                    );
+                  })}
+                </div>
+              </li>
             </ul>
           </div>
         </div>
