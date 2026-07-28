@@ -69,7 +69,7 @@ function AboutPage() {
   const [showAllGallery, setShowAllGallery] = useState(false);
 
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
       {/* Hero */}
       <section className="relative w-full overflow-hidden pt-40 pb-24 text-white">
         {/* Background Image */}
@@ -258,6 +258,6 @@ function AboutPage() {
           )}
         </Container>
       </section>
-    </>
+    </div>
   );
 }
