@@ -23,7 +23,9 @@ export function Timeline() {
               <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
                 <div className="font-display text-3xl text-gold">{item.year}</div>
                 <h4 className="mt-1 font-display text-xl text-navy">{item.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             </div>
 

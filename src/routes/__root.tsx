@@ -23,7 +23,10 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white"
+          >
             Back to Home
           </Link>
         </div>
@@ -42,10 +45,20 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">Something went wrong on our end.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white"
-          >Try again</button>
-          <a href="/" className="rounded-full border border-input bg-background px-5 py-2.5 text-sm font-semibold text-navy">Go home</a>
+          >
+            Try again
+          </button>
+          <a
+            href="/"
+            className="rounded-full border border-input bg-background px-5 py-2.5 text-sm font-semibold text-navy"
+          >
+            Go home
+          </a>
         </div>
       </div>
     </div>
@@ -69,25 +82,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Lovable App" },
       { property: "og:title", content: "Lovable App" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
-      { property: "og:description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
-      { name: "twitter:description", content: "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp" },
+      {
+        name: "description",
+        content:
+          "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design.",
+      },
+      {
+        property: "og:description",
+        content:
+          "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A premium corporate website for Iresha Holdings, showcasing its diversified global enterprise with a modern, luxurious design.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/033e57ad-e468-460a-83a1-9f3f20af396d/id-preview-887ebeb7--530224a2-7fba-4877-9c9e-33ed7bf6e58d.lovable.app-1778762453989.webp",
+      },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: SITE.name,
-        description: SITE.description,
-        email: SITE.email,
-        telephone: SITE.phone,
-        address: SITE.address,
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: SITE.name,
+          description: SITE.description,
+          email: SITE.email,
+          telephone: SITE.phone,
+          address: SITE.address,
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

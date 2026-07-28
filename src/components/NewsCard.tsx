@@ -25,7 +25,11 @@ export function NewsCard({
     >
       <div className="relative h-44 overflow-hidden bg-navy-gradient">
         {image ? (
-          <img src={image} alt={title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         ) : (
           <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_30%_30%,white,transparent_50%)]" />
         )}
@@ -41,7 +45,10 @@ export function NewsCard({
         <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{excerpt}</p>
         <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy">
           Read more
-          <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight
+            size={14}
+            className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
         </div>
       </div>
     </motion.a>
