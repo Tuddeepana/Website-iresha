@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
 import { StatsCounter } from "@/sections/StatsCounter";
@@ -13,6 +14,34 @@ import gallery5 from "@/assets/gallery5.webp";
 import gallery6 from "@/assets/gallery6.webp";
 import gallery7 from "@/assets/gallery7.webp";
 import gallery8 from "@/assets/gallery8.webp";
+
+import city0 from "@/assets/Iresha super city.webp";
+import city1 from "@/assets/Iresha super city1.webp";
+import city2 from "@/assets/Iresha super city2.webp";
+import city3 from "@/assets/Iresha super city3.webp";
+import city4 from "@/assets/Iresha super city4.webp";
+import city5 from "@/assets/Iresha super city5.webp";
+import city6 from "@/assets/Iresha super city6.webp";
+import city7 from "@/assets/Iresha super city7.webp";
+
+const ALL_GALLERY_IMAGES = [
+  { src: gallery1, className: "col-span-2 row-span-2" },
+  { src: gallery2, className: "col-span-1 row-span-1" },
+  { src: gallery3, className: "col-span-1 row-span-1" },
+  { src: gallery4, className: "col-span-1 row-span-1" },
+  { src: gallery5, className: "col-span-1 row-span-1" },
+  { src: gallery6, className: "col-span-1 row-span-1" },
+  { src: gallery7, className: "col-span-1 row-span-1" },
+  { src: gallery8, className: "col-span-2 row-span-1" },
+  { src: city0, className: "col-span-1 row-span-1" },
+  { src: city1, className: "col-span-1 row-span-1" },
+  { src: city2, className: "col-span-2 row-span-2" },
+  { src: city3, className: "col-span-1 row-span-1" },
+  { src: city4, className: "col-span-1 row-span-1" },
+  { src: city5, className: "col-span-1 row-span-1" },
+  { src: city6, className: "col-span-1 row-span-1" },
+  { src: city7, className: "col-span-2 row-span-1" },
+];
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -37,6 +66,8 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
+  const [showAllGallery, setShowAllGallery] = useState(false);
+
   return (
     <>
       {/* Hero */}
@@ -197,30 +228,34 @@ function AboutPage() {
             />
           </Reveal>
           <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-50 md:auto-rows-62.5">
-            {[
-              { src: gallery1, className: "col-span-2 row-span-2" },
-              { src: gallery2, className: "col-span-1 row-span-1" },
-              { src: gallery3, className: "col-span-1 row-span-1" },
-              { src: gallery4, className: "col-span-1 row-span-1" },
-              { src: gallery5, className: "col-span-1 row-span-1" },
-              { src: gallery6, className: "col-span-1 row-span-1" },
-              { src: gallery7, className: "col-span-1 row-span-1" },
-              { src: gallery8, className: "col-span-2 row-span-1" },
-            ].map(({ src, className }, i) => (
-              <div
-                key={i}
-                className={`group relative overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated ${className}`}
-              >
-                <img
-                  src={src}
-                  alt={`Gallery image ${i + 1}`}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
-              </div>
-            ))}
+            {ALL_GALLERY_IMAGES.slice(0, showAllGallery ? undefined : 8).map(
+              ({ src, className }, i) => (
+                <div
+                  key={i}
+                  className={`group relative overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated ${className}`}
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery image ${i + 1}`}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
+                </div>
+              ),
+            )}
           </Stagger>
+
+          {ALL_GALLERY_IMAGES.length > 8 && (
+            <Reveal delay={0.2} className="mt-12 flex justify-center">
+              <button
+                onClick={() => setShowAllGallery(!showAllGallery)}
+                className="group inline-flex items-center gap-2 rounded-full border-2 border-gold text-gold px-8 py-3.5 text-sm font-semibold transition-all hover:bg-gold hover:text-navy"
+              >
+                {showAllGallery ? "Show Less" : "See More"}
+              </button>
+            </Reveal>
+          )}
         </Container>
       </section>
     </>
