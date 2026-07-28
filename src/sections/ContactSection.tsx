@@ -20,8 +20,7 @@ export function ContactSection() {
             <div className="flex h-full flex-col gap-5 rounded-2xl bg-navy-gradient p-8 text-white shadow-elevated">
               <h3 className="font-display text-2xl text-white">Group Head Office</h3>
               <p className="text-sm text-white/70">
-                Visit us at our Colombo headquarters or get in touch through any of the channels
-                below.
+                Visit us at our headquarters or get in touch through any of the channels below.
               </p>
 
               <div className="mt-4 space-y-4 text-sm">
