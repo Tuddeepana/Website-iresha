@@ -48,9 +48,9 @@ function AboutPage() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/60 to-black/40" />
 
-        <div className="absolute inset-0 [background-image:radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.15),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.15),transparent_60%)]" />
 
         {/* Content */}
         <Container>
@@ -94,7 +94,7 @@ function AboutPage() {
             <Reveal delay={0.1}>
               <div className="relative">
                 <div className="absolute -inset-6 -z-10 rounded-3xl bg-gold-gradient opacity-15 blur-2xl" />
-                <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-navy shadow-elevated">
+                <div className="aspect-4/5 overflow-hidden rounded-3xl bg-navy shadow-elevated">
                   <img
                     src={chairmanImg}
                     alt="Group Chairman"
@@ -196,7 +196,7 @@ function AboutPage() {
               description="A glimpse into the world of Iresha Holdings."
             />
           </Reveal>
-          <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
+          <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-50 md:auto-rows-62.5">
             {[
               { src: gallery1, className: "col-span-2 row-span-2" },
               { src: gallery2, className: "col-span-1 row-span-1" },

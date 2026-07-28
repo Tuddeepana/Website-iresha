@@ -44,13 +44,13 @@ function BusinessDetailPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[480px] overflow-hidden">
+      <section className="relative h-[60vh] min-h-120 overflow-hidden">
         <img
           src={business.image}
           alt={business.title}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-deep via-navy-deep/70 to-navy-deep/40" />
         <div className="absolute inset-0 flex items-end">
           <Container>
             <motion.div
@@ -184,7 +184,7 @@ function BusinessDetailPage() {
                 key={b.slug}
                 to="/business/$slug"
                 params={{ slug: b.slug }}
-                className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-gold"
+                className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/4 p-5 transition-colors hover:border-gold"
               >
                 <div>
                   <div className="text-xs uppercase tracking-wider text-white/50">Discover</div>

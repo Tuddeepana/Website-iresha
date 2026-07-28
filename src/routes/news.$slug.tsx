@@ -19,7 +19,7 @@ function NewsArticlePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[480px] overflow-hidden">
+      <section className="relative h-[60vh] min-h-120 overflow-hidden">
         {article.image ? (
           <img
             src={article.image}
@@ -29,7 +29,7 @@ function NewsArticlePage() {
         ) : (
           <div className="absolute inset-0 bg-navy-gradient" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-deep via-navy-deep/70 to-navy-deep/40" />
         <div className="absolute inset-0 flex items-end">
           <Container>
             <motion.div

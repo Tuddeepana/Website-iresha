@@ -109,7 +109,7 @@ export function ContactSection() {
               </button>
             </form>
 
-            <div className="mt-6 aspect-[16/7] overflow-hidden rounded-2xl border border-border bg-muted">
+            <div className="mt-6 aspect-16/7 overflow-hidden rounded-2xl border border-border bg-muted">
               <iframe
                 title="Iresha Holdings location"
                 aria-label="Map"
