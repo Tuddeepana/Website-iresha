@@ -39,17 +39,19 @@ export function HeroSection() {
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
-          {["Building", "Sri Lanka’s Future", "Through", "Diversified Excellence"].map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="mr-3 inline-block"
-            >
-              {i === 1 ? <span className="text-gold-gradient">{word}</span> : word}
-            </motion.span>
-          ))}
+          {["Building", "Sri Lanka’s Future", "Through", "Diversified Excellence"].map(
+            (word, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="mr-3 inline-block"
+              >
+                {i === 1 ? <span className="text-gold-gradient">{word}</span> : word}
+              </motion.span>
+            ),
+          )}
         </h1>
 
         <motion.p
@@ -58,8 +60,8 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          A diversified group operating across fuel retail, supermarkets, rice milling and hospitality —
-          uniting Sri Lankan heritage with international standards.
+          A diversified group operating across fuel retail, supermarkets, rice milling and
+          hospitality — uniting Sri Lankan heritage with international standards.
         </motion.p>
 
         <motion.div

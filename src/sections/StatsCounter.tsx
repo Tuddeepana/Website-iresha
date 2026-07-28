@@ -18,7 +18,9 @@ export function StatsCounter() {
               <div className="font-display text-5xl text-gold-gradient md:text-6xl">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/60">{s.label}</div>
+              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/60">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>
