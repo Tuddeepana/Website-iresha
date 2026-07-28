@@ -5,7 +5,7 @@ export function Timeline() {
   return (
     <div className="relative mx-auto max-w-3xl">
       {/* central line */}
-      <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-gold via-border to-transparent md:left-1/2" />
+      <div className="absolute left-4 top-0 h-full w-px bg-linear-to-b from-gold via-border to-transparent md:left-1/2" />
 
       <div className="space-y-12">
         {TIMELINE.map((item, i) => (
