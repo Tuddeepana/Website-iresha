@@ -33,10 +33,26 @@ export function Footer() {
             {/* Social Icons */}
             <div className="mt-6 flex gap-3">
               {[
-                { Icon: Facebook, href: SITE.socials.facebook, label: "Facebook" },
-                { Icon: Instagram, href: SITE.socials.instagram, label: "Instagram" },
-                { Icon: Linkedin, href: SITE.socials.linkedin, label: "LinkedIn" },
-                { Icon: Youtube, href: SITE.socials.youtube, label: "YouTube" },
+                {
+                  Icon: Facebook,
+                  href: SITE.socials.facebook,
+                  label: "Facebook",
+                },
+                {
+                  Icon: Instagram,
+                  href: SITE.socials.instagram,
+                  label: "Instagram",
+                },
+                {
+                  Icon: Linkedin,
+                  href: SITE.socials.linkedin,
+                  label: "LinkedIn",
+                },
+                {
+                  Icon: Youtube,
+                  href: SITE.socials.youtube,
+                  label: "YouTube",
+                },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -55,6 +71,7 @@ export function Footer() {
           {/* Company Links */}
           <div className="lg:col-span-2">
             <h4 className="font-display text-base font-semibold text-white">Company</h4>
+
             <ul className="mt-4 space-y-3 text-sm">
               {NAV.map((n) => (
                 <li key={n.to}>
@@ -69,6 +86,7 @@ export function Footer() {
           {/* Businesses */}
           <div className="lg:col-span-3">
             <h4 className="font-display text-base font-semibold text-white">Our Businesses</h4>
+
             <ul className="mt-4 space-y-3 text-sm">
               {BUSINESSES.map((b) => (
                 <li key={b.slug}>
@@ -102,6 +120,7 @@ export function Footer() {
                 aria-label="Email address"
                 className="flex-1 bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none"
               />
+
               <button
                 type="submit"
                 aria-label="Subscribe"
@@ -119,9 +138,10 @@ export function Footer() {
                 <span>{SITE.address}</span>
               </li>
 
-              {/* Phones (Multi-line) */}
+              {/* Phones */}
               <li className="flex items-start gap-2.5">
                 <Phone size={16} className="mt-0.5 text-gold" />
+
                 <div className="flex flex-col">
                   {SITE.phone.map((p, i) => (
                     <a key={i} href={`tel:${p.replace(/[^0-9]/g, "")}`} className="hover:text-gold">
@@ -130,32 +150,39 @@ export function Footer() {
                   ))}
                 </div>
               </li>
-
-              {/* Email */}
-              <li className="flex items-start gap-2.5">
-                <Mail size={16} className="mt-0.5 text-gold" />
-
-                <div className="flex flex-col">
-                  {SITE.email.map((e, i) => {
-                    const emailOnly = e.split("–")[1]?.trim();
-
-                    return (
-                      <a key={i} href={`mailto:${emailOnly}`} className="hover:text-gold">
-                        {e}
-                      </a>
-                    );
-                  })}
-                </div>
-              </li>
             </ul>
           </div>
         </div>
 
+        {/* Full Width Email Section */}
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <div className="grid grid-cols-1 gap-6 text-sm sm:grid-cols-2 lg:grid-cols-4">
+            {SITE.email.map((e, i) => {
+              const [name, emailOnly] = e.split("–").map((item) => item.trim());
+
+              return (
+                <div key={i} className="flex items-start gap-3">
+                  <Mail size={18} className="mt-1 text-gold" />
+
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-white">{name}</span>
+
+                    <a href={`mailto:${emailOnly}`} className="mt-1 hover:text-gold">
+                      {emailOnly}
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center">
           <p>
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
+
           <p>Crafted with care in Colombo, Sri Lanka.</p>
         </div>
       </div>
