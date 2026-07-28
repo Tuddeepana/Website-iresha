@@ -19,7 +19,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         const urls = paths
           .map(
             (p) =>
-              `  <url><loc>${BASE_URL}${p.path}</loc><changefreq>weekly</changefreq><priority>${p.priority}</priority></url>`
+              `  <url><loc>${BASE_URL}${p.path}</loc><changefreq>weekly</changefreq><priority>${p.priority}</priority></url>`,
           )
           .join("\n");
         const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
