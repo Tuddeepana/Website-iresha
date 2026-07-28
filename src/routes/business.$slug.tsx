@@ -132,7 +132,7 @@ function BusinessDetailPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-background py-24">
+      <section className="bg-mist py-24">
         <Container>
           <Reveal>
             <SectionHeading eyebrow="Gallery" title="A glimpse inside" />

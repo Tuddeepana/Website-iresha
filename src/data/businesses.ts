@@ -9,6 +9,9 @@ import supercity3 from "@/assets/Iresha super city3.webp";
 import supercity4 from "@/assets/Iresha super city4.webp";
 import supercity5 from "@/assets/Iresha super city5.webp";
 import supercity6 from "@/assets/Iresha super city6.webp";
+import supercity7 from "@/assets/Iresha super city7.webp";
+import gallery1 from "@/assets/gallery1.webp";
+import gallery2 from "@/assets/gallery2.webp";
 
 export type Business = {
   slug: string;
@@ -54,7 +57,7 @@ export const BUSINESSES: Business[] = [
       { value: "4.9★", label: "Customer Rating" },
       { value: "7AM - 10PM", label: "Operations" },
     ],
-    gallery: [fuel, fuel, fuel],
+    gallery: [gallery1, gallery2, fuel],
   },
   {
     slug: "supermarket",
@@ -86,7 +89,7 @@ export const BUSINESSES: Business[] = [
       { value: "12K+", label: "SKUs Stocked" },
       { value: "10K+", label: "Customers" },
     ],
-    gallery: [supercity1, supercity2, supercity3, supercity4, supercity5, supercity6],
+    gallery: [supercity1, supercity2, supercity3, supercity4, supercity5, supercity6, supercity7],
   },
   {
     slug: "rice-mill",
