@@ -35,9 +35,18 @@ export const BUSINESSES: Business[] = [
     image: fuel,
     icon: "fuel",
     services: [
-      { title: "Premium Fuels", description: "Petrol, diesel and lubricants meeting international standards." },
-      { title: "Convenience Stores", description: "Modern forecourt retail with food, beverages and essentials." },
-      { title: "Fleet Solutions", description: "Corporate fuel cards, fleet refuelling and tank monitoring." },
+      {
+        title: "Premium Fuels",
+        description: "Petrol, diesel and lubricants meeting international standards.",
+      },
+      {
+        title: "Convenience Stores",
+        description: "Modern forecourt retail with food, beverages and essentials.",
+      },
+      {
+        title: "Fleet Solutions",
+        description: "Corporate fuel cards, fleet refuelling and tank monitoring.",
+      },
       { title: "Vehicle Care", description: "Express car wash, tyre and lubrication services." },
     ],
     achievements: [
@@ -58,10 +67,19 @@ export const BUSINESSES: Business[] = [
     image: supercityMain,
     icon: "shopping",
     services: [
-      { title: "Fresh Produce", description: "Daily-sourced vegetables, fruit and dairy from local farmers." },
-      { title: "Imported Brands", description: "International grocery and lifestyle brands under one roof." },
+      {
+        title: "Fresh Produce",
+        description: "Daily-sourced vegetables, fruit and dairy from local farmers.",
+      },
+      {
+        title: "Imported Brands",
+        description: "International grocery and lifestyle brands under one roof.",
+      },
       { title: "Bakery & Deli", description: "In-store bakery and ready-to-eat counters." },
-      { title: "Loyalty Rewards", description: "A rewarding membership program for regular shoppers." },
+      {
+        title: "Loyalty Rewards",
+        description: "A rewarding membership program for regular shoppers.",
+      },
     ],
     achievements: [
       { value: "2", label: "Outlets" },
@@ -81,10 +99,22 @@ export const BUSINESSES: Business[] = [
     image: ricemill,
     icon: "wheat",
     services: [
-      { title: "Paddy Procurement", description: "Direct partnerships with over 3,000 farmers across the island." },
-      { title: "Modern Milling", description: "Stainless-steel polishing, color sorting and packaging lines." },
-      { title: "Branded Rice", description: "Premium and value rice brands distributed nationwide." },
-      { title: "Export Programme", description: "Export-grade rice serving South Asia and the Middle East." },
+      {
+        title: "Paddy Procurement",
+        description: "Direct partnerships with over 3,000 farmers across the island.",
+      },
+      {
+        title: "Modern Milling",
+        description: "Stainless-steel polishing, color sorting and packaging lines.",
+      },
+      {
+        title: "Branded Rice",
+        description: "Premium and value rice brands distributed nationwide.",
+      },
+      {
+        title: "Export Programme",
+        description: "Export-grade rice serving South Asia and the Middle East.",
+      },
     ],
     achievements: [
       { value: "120K", label: "Tons / Year" },
@@ -104,10 +134,19 @@ export const BUSINESSES: Business[] = [
     image: restaurant,
     icon: "utensils",
     services: [
-      { title: "Fine Dining", description: "Signature restaurants showcasing Sri Lankan and global cuisine." },
+      {
+        title: "Fine Dining",
+        description: "Signature restaurants showcasing Sri Lankan and global cuisine.",
+      },
       { title: "Casual Brands", description: "Popular casual dining concepts in key cities." },
-      { title: "Banquets & Events", description: "Custom event catering for weddings and corporate functions." },
-      { title: "Culinary Academy", description: "Training the next generation of Sri Lankan hospitality talent." },
+      {
+        title: "Banquets & Events",
+        description: "Custom event catering for weddings and corporate functions.",
+      },
+      {
+        title: "Culinary Academy",
+        description: "Training the next generation of Sri Lankan hospitality talent.",
+      },
     ],
     achievements: [
       { value: "11", label: "Restaurants" },
