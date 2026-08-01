@@ -4,25 +4,25 @@ import { Container, SectionHeading } from "@/components/Section";
 import { Reveal, Stagger } from "@/components/Reveal";
 import { StatsCounter } from "@/sections/StatsCounter";
 import { Quote, Compass, Target } from "lucide-react";
-import chairmanImg from "@/assets/chairman.webp";
-import aboutBg from "@/assets/About_Us_IreshaHoldings.webp";
-import gallery1 from "@/assets/gallery1.webp";
-import gallery2 from "@/assets/gallery2.webp";
-import gallery3 from "@/assets/gallery3.webp";
-import gallery4 from "@/assets/gallery4.webp";
-import gallery5 from "@/assets/gallery5.webp";
-import gallery6 from "@/assets/gallery6.webp";
-import gallery7 from "@/assets/gallery7.webp";
-import gallery8 from "@/assets/gallery8.webp";
+import chairmanImg from "@/assets/iresha-holdings-chairman.webp";
+import aboutBg from "@/assets/about-us-iresha-holdings.webp";
+import gallery1 from "@/assets/iresha-fuel-station-opens-tissamaharama8.webp";
+import gallery2 from "@/assets/iresha-fuel-station-opens-tissamaharama7.webp";
+import gallery3 from "@/assets/iresha-fuel-station-opens-tissamaharama5.webp";
+import gallery4 from "@/assets/iresha--fuel-station-opens-tissamaharama.webp";
+import gallery5 from "@/assets/iresha-fuel-station-opens-tissamaharama3.webp";
+import gallery6 from "@/assets/iresha-fuel-station-forecourt.webp";
+import gallery7 from "@/assets/iresha-fuel-station-opens-tissamaharama6.webp";
+import gallery8 from "@/assets/iresha-fuel-station-opens-tissamaharama4.webp";
 
-import city0 from "@/assets/Iresha super city.webp";
-import city1 from "@/assets/Iresha super city1.webp";
-import city2 from "@/assets/Iresha super city2.webp";
-import city3 from "@/assets/Iresha super city3.webp";
-import city4 from "@/assets/Iresha super city4.webp";
-import city5 from "@/assets/Iresha super city5.webp";
-import city6 from "@/assets/Iresha super city6.webp";
-import city7 from "@/assets/Iresha super city7.webp";
+import city0 from "@/assets/iresha-super-city-supermarket.webp";
+import city1 from "@/assets/iresha-super-city-supermarket-interior-1.webp";
+import city2 from "@/assets/iresha-super-city-supermarket-interior-2.webp";
+import city3 from "@/assets/iresha-super-city-supermarket-interior-3.webp";
+import city4 from "@/assets/iresha-super-city-supermarket-interior-4.webp";
+import city5 from "@/assets/iresha-super-city-supermarket-exterior-5.webp";
+import city6 from "@/assets/iresha-super-city-supermarket-exterior-6.webp";
+import city7 from "@/assets/iresha-super-city-supermarket-products-7.webp";
 
 const ALL_GALLERY_IMAGES = [
   { src: gallery1, className: "col-span-2 row-span-2" },

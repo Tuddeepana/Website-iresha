@@ -3,8 +3,8 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { NAV, SITE } from "@/data/site";
 import { useScrolled } from "@/hooks/useScrolled";
-import logoDark from "@/assets/Iresha Holdings LOGO.webp";
-import logoLight from "@/assets/Iresha Holdings LOGO Reverse.webp";
+import logoDark from "@/assets/iresha-holdings-logo.webp";
+import logoLight from "@/assets/iresha-holdings-logo-reverse.webp";
 
 export function Navbar() {
   const scrolled = useScrolled(20);
