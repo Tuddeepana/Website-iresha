@@ -55,7 +55,7 @@ function Index() {
             <SectionHeading
               align="center"
               eyebrow="Our Journey"
-              title="Twenty-six years of disciplined growth"
+              title="34 years of disciplined growth"
               description="From a single rice mill to a diversified group spanning four sectors — every milestone built on trust, quality and partnership."
             />
           </Reveal>
