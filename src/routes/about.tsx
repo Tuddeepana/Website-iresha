@@ -100,7 +100,7 @@ function AboutPage() {
 
             <p className="mt-6 max-w-2xl text-white/90 text-lg drop-shadow-lg">
               For more than two decades, Iresha Holdings has grown from a single rice mill in
-              Polonnaruwa into a national group serving Sri Lankan households and businesses every
+              Tissamaharama into a national group serving Sri Lankan households and businesses every
               day.
             </p>
           </Reveal>
