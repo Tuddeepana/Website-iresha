@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { NAV, SITE } from "@/data/site";
 import { BUSINESSES } from "@/data/businesses";
-import logoLight from "@/assets/Iresha Holdings LOGO Reverse.webp";
+import logoLight from "@/assets/iresha-holdings-logo-reverse.webp";
 
 export function Footer() {
   return (
