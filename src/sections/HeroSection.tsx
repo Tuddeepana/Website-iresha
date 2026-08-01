@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import heroBg1 from "@/assets/HeroSection_IreshaHoldings.webp";
-import heroBg2 from "@/assets/biz-fuel.webp";
-import heroBg3 from "@/assets/Iresha super city7.webp";
+import heroBg1 from "@/assets/hero-section-iresha-holdings.webp";
+import heroBg2 from "@/assets/iresha-fuel-station.webp";
+import heroBg3 from "@/assets/iresha-super-city-supermarket-products-7.webp";
 
 const SLIDER_IMAGES = [heroBg1, heroBg2, heroBg3];
 

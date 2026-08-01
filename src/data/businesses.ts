@@ -1,17 +1,17 @@
-import fuel from "@/assets/biz-fuel.webp";
-import supermarket from "@/assets/biz-supermarket.webp";
-import ricemill from "@/assets/biz-ricemill.webp";
-import restaurant from "@/assets/biz-restaurant.webp";
-import supercityMain from "@/assets/Iresha super city.webp";
-import supercity1 from "@/assets/Iresha super city1.webp";
-import supercity2 from "@/assets/Iresha super city2.webp";
-import supercity3 from "@/assets/Iresha super city3.webp";
-import supercity4 from "@/assets/Iresha super city4.webp";
-import supercity5 from "@/assets/Iresha super city5.webp";
-import supercity6 from "@/assets/Iresha super city6.webp";
-import supercity7 from "@/assets/Iresha super city7.webp";
-import gallery1 from "@/assets/gallery1.webp";
-import gallery2 from "@/assets/gallery2.webp";
+import fuel from "@/assets/iresha-fuel-station.webp";
+import supermarket from "@/assets/iresha-supermarket.webp";
+import ricemill from "@/assets/iresha-rice-mill.webp";
+import restaurant from "@/assets/iresha-restaurant-hospitality.webp";
+import supercityMain from "@/assets/iresha-super-city-supermarket.webp";
+import supercity1 from "@/assets/iresha-super-city-supermarket-interior-1.webp";
+import supercity2 from "@/assets/iresha-super-city-supermarket-interior-2.webp";
+import supercity3 from "@/assets/iresha-super-city-supermarket-interior-3.webp";
+import supercity4 from "@/assets/iresha-super-city-supermarket-interior-4.webp";
+import supercity5 from "@/assets/iresha-super-city-supermarket-exterior-5.webp";
+import supercity6 from "@/assets/iresha-super-city-supermarket-exterior-6.webp";
+import supercity7 from "@/assets/iresha-super-city-supermarket-products-7.webp";
+import gallery1 from "@/assets/-super-city-supermarket-products-8.webp";
+import gallery2 from "@/assets/iresha-fuel-station-opens-tissamaharama7.webp";
 
 export type Business = {
   slug: string;

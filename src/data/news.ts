@@ -1,4 +1,4 @@
-import newsImage from "@/assets/news_fuel_station_ opens_tissamaharam.webp";
+import newsImage from "@/assets/iresha-fuel-station-opens-tissamaharama.webp";
 
 export const NEWS = [
   {
