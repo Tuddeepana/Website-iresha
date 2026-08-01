@@ -5,7 +5,7 @@ const STATS = [
   { value: 4, suffix: "", label: "Group Companies" },
   { value: 5, suffix: "+", label: "Outlets Nationwide" },
   { value: 50, suffix: "+", label: "Team Members" },
-  { value: 24, suffix: "", label: "Years of Heritage" },
+  { value: 34, suffix: "", label: "Years of Heritage" },
 ];
 
 export function StatsCounter() {
