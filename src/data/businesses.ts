@@ -10,7 +10,7 @@ import supercity4 from "@/assets/iresha-super-city-supermarket-interior-4.webp";
 import supercity5 from "@/assets/iresha-super-city-supermarket-exterior-5.webp";
 import supercity6 from "@/assets/iresha-super-city-supermarket-exterior-6.webp";
 import supercity7 from "@/assets/iresha-super-city-supermarket-products-7.webp";
-import gallery1 from "@/assets/-super-city-supermarket-products-8.webp";
+import gallery1 from "@/assets/iresha-fuel-station-opens-tissamaharama8.webp";
 import gallery2 from "@/assets/iresha-fuel-station-opens-tissamaharama7.webp";
 
 export type Business = {
