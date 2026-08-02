@@ -40,7 +40,9 @@ function Index() {
               Trusted by communities across Sri Lanka
             </p>
           </Reveal>
-          <div className="mt-8"><LogoSlider /></div>
+          <div className="mt-8">
+            <LogoSlider />
+          </div>
         </Container>
       </section>
 
@@ -53,11 +55,13 @@ function Index() {
             <SectionHeading
               align="center"
               eyebrow="Our Journey"
-              title="Twenty-six years of disciplined growth"
+              title="34 years of disciplined growth"
               description="From a single rice mill to a diversified group spanning four sectors — every milestone built on trust, quality and partnership."
             />
           </Reveal>
-          <div className="mt-16"><Timeline /></div>
+          <div className="mt-16">
+            <Timeline />
+          </div>
         </Container>
       </section>
 
@@ -72,7 +76,9 @@ function Index() {
             />
           </Reveal>
           <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
-            {NEWS.map((n) => <NewsCard key={n.title} {...n} />)}
+            {NEWS.map((n) => (
+              <NewsCard key={n.title} {...n} />
+            ))}
           </Stagger>
         </Container>
       </section>

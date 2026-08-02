@@ -1,29 +1,45 @@
 import { Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/HeroSection_IreshaHoldings.webp";
+import { useState, useEffect } from "react";
+
+import heroBg1 from "@/assets/hero-section-iresha-holdings.webp";
+import heroBg2 from "@/assets/iresha-fuel-station.webp";
+import heroBg3 from "@/assets/iresha-super-city-supermarket-products-7.webp";
+
+const SLIDER_IMAGES = [heroBg1, heroBg2, heroBg3];
 
 export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % SLIDER_IMAGES.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative flex max-h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
-      {/* Parallax bg */}
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute inset-0"
-      >
-        <img
-          src={heroBg}
-          alt=""
-          aria-hidden="true"
-          className="h-full w-full object-cover"
-          width={1920}
-          height={1080}
-        />
-      </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-deep/90 via-navy/75 to-navy-deep/95" />
-      <div className="absolute inset-0 [background-image:radial-gradient(circle_at_20%_70%,rgba(212,175,55,0.18),transparent_55%)]" />
+    <section className="relative flex h-screen items-center object-fill overflow-hidden bg-navy-gradient pt-32 pb-24 text-white sm:pt-40 md:pb-32">
+      {/* Background Slider */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={currentIndex}
+            src={SLIDER_IMAGES[currentIndex]}
+            alt=""
+            aria-hidden="true"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </AnimatePresence>
+      </div>
+
+      <div className="absolute inset-0 bg-linear-to-br from-navy-deep/90 via-navy/75 to-navy-deep/95" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_70%,rgba(212,175,55,0.18),transparent_55%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl container-px pt-32 pb-24 text-white">
         <motion.div
@@ -39,17 +55,19 @@ export function HeroSection() {
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
-          {["Building", "Sri Lanka’s Future", "Through", "Diversified Excellence"].map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="mr-3 inline-block"
-            >
-              {i === 1 ? <span className="text-gold-gradient">{word}</span> : word}
-            </motion.span>
-          ))}
+          {["Building", "Sri Lanka’s Future", "Through", "Diversified Excellence"].map(
+            (word, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="mr-3 inline-block"
+              >
+                {i === 1 ? <span className="text-gold-gradient">{word}</span> : word}
+              </motion.span>
+            ),
+          )}
         </h1>
 
         <motion.p
@@ -58,8 +76,8 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          A diversified group operating across fuel retail, supermarkets, rice milling and hospitality —
-          uniting Sri Lankan heritage with international standards.
+          A diversified group operating across fuel retail, supermarkets, rice milling and
+          hospitality — uniting Sri Lankan heritage with international standards.
         </motion.p>
 
         <motion.div

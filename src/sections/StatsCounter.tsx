@@ -3,9 +3,9 @@ import { Counter } from "@/components/Counter";
 
 const STATS = [
   { value: 4, suffix: "", label: "Group Companies" },
-  { value: 80, suffix: "+", label: "Outlets Nationwide" },
-  { value: 2400, suffix: "+", label: "Team Members" },
-  { value: 26, suffix: "", label: "Years of Heritage" },
+  { value: 5, suffix: "+", label: "Outlets Nationwide" },
+  { value: 50, suffix: "+", label: "Team Members" },
+  { value: 34, suffix: "", label: "Years of Heritage" },
 ];
 
 export function StatsCounter() {
@@ -18,7 +18,9 @@ export function StatsCounter() {
               <div className="font-display text-5xl text-gold-gradient md:text-6xl">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/60">{s.label}</div>
+              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/60">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>
